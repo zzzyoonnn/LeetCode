@@ -11,10 +11,10 @@ class Solution {
             int curStart = interval[0];
             int curEnd = interval[1];
             
-            if (curStart <= preEnd) {
+            if (curStart <= preEnd) {       // 겹치는 구간 업데이트
                 preStart = Math.min(curStart, preStart);
                 preEnd = Math.max(curEnd, preEnd);
-            } else {
+            } else {        // 겹치는 구간이 없다면, 기존 구간 추가 후, 새로운 구간 업데이트
                 answer.add(new int[]{preStart, preEnd});
                 
                 preStart = curStart;
@@ -22,7 +22,7 @@ class Solution {
             }
         }
         
-        answer.add(new int[]{preStart, preEnd});
+        answer.add(new int[]{preStart, preEnd});    // 마지막 구간 추가
         return answer.toArray(new int[0][]);
         
     }

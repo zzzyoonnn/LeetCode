@@ -12,9 +12,8 @@ class Solution {
             char c = pattern.charAt(i);
 
             if (!map.containsKey(c)) {
-                for (char ch : map.keySet()) {
-                    if (map.get(ch).equals(arr[i])) return false;
-                }
+                if (map.containsValue(arr[i])) return false;
+                
                 map.put(c, arr[i]);
             }
             else {

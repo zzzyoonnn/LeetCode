@@ -24,7 +24,6 @@ LeetCode/
 ├── easy/
 ├── medium/
 └── hard/
-
 ```
  
 ---
